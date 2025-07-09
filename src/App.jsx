@@ -62,14 +62,15 @@ import Title from "./components/Title";
       isCompleted: false,
     }
     setTasks([... tasks, newTask])
+    
   }
-
 
   return(
     <div className="w-screen h-screen flex justify-center p-6 bg-blue-400">
         <div className="w-[500px] space-y-4">
           <Title> Gerenciador de Tarefas </ Title>
           <AddTask onAddTaskSubmit={onAddTaskSubmit} />
+          <h1 className="text-3xl text-slate-100 font-bold text-center " >Total de Tarefas : {tasks.length}</h1>
           <Tasks tasks={tasks} onTaskClick={onTaskClick} onDeleteTaskClick={onDeleteTaskClick} />
         </div>
         
